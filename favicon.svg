@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="13" fill="#103b38"/>
+  <!-- three staggered apartment blocks -->
+  <rect x="13" y="26" width="11" height="24" rx="1.5" fill="#f2efe6"/>
+  <rect x="26.5" y="18" width="11" height="32" rx="1.5" fill="#f2efe6"/>
+  <rect x="40" y="30" width="11" height="20" rx="1.5" fill="#f2efe6"/>
+  <!-- windows on the tallest block -->
+  <rect x="29.4" y="23" width="2.4" height="2.4" rx="0.4" fill="#103b38"/>
+  <rect x="33.2" y="23" width="2.4" height="2.4" rx="0.4" fill="#103b38"/>
+  <rect x="29.4" y="29" width="2.4" height="2.4" rx="0.4" fill="#103b38"/>
+  <rect x="33.2" y="29" width="2.4" height="2.4" rx="0.4" fill="#103b38"/>
+  <!-- brass ground line -->
+  <rect x="11" y="50" width="42" height="3.2" rx="1.6" fill="#c79a3f"/>
+</svg>
