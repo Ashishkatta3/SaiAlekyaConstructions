@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sai Alekya Constructions — Homes built to last | Tirupati</title>
+<meta name="description" content="Sai Alekya Constructions (Alekya Homes) — a Tirupati builder delivering RCC-framed 2 &amp; 3 BHK apartments engineered for wind and seismic loads." />
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#103b38">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1b1b18;
+    --muted:#67635a;
+    --paper:#f2f0ea;
+    --paper-2:#e9e6dd;
+    --card:#fbfaf6;
+    --pine:#103b38;
+    --pine-2:#17544e;
+    --sand:#c9bea4;
+    --brass:#9c7d3a;
+    --line:rgba(27,27,24,.12);
+    --line-soft:rgba(27,27,24,.07);
+    --shadow:0 18px 50px -24px rgba(16,59,56,.35);
+    --wrap:1180px;
+    --serif:"Zilla Slab",Georgia,serif;
+    --sans:"Inter",system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0;letter-spacing:-.01em}
+  p{margin:0}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 26px}
+
+  /* ---------- eyebrow / title-block label ---------- */
+  .eyebrow{
+    display:flex;align-items:center;gap:12px;
+    font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:22px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--brass);flex:none}
+  .eyebrow.light{color:rgba(255,255,255,.72)}
+  .eyebrow.light::before{background:var(--brass)}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.01em;
+    padding:14px 24px;border-radius:2px;border:1px solid transparent;
+    transition:transform .18s ease,background .18s ease,color .18s ease,border-color .18s ease;
+    cursor:pointer;
+  }
+  .btn svg{width:17px;height:17px;flex:none}
+  .btn-primary{background:var(--pine);color:#fff}
+  .btn-primary:hover{background:var(--pine-2);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .btn-wa{background:#1f7a4d;color:#fff}
+  .btn-wa:hover{background:#1a6a43;transform:translateY(-2px)}
+  .btn-light{background:#fff;color:var(--pine)}
+  .btn-light:hover{transform:translateY(-2px)}
+
+  /* ---------- header ---------- */
+  .site-header{
+    position:fixed;top:0;left:0;right:0;z-index:60;
+    transition:background .3s ease,box-shadow .3s ease,border-color .3s ease;
+    border-bottom:1px solid transparent;
+  }
+  .site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;flex-direction:column;line-height:1;color:#fff;transition:color .3s ease}
+  .brand .b1{font-family:var(--serif);font-weight:700;font-size:20px;letter-spacing:.01em}
+  .brand .b2{font-family:var(--sans);font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;margin-top:5px;opacity:.85}
+  .nav{display:flex;align-items:center;gap:30px}
+  .nav a.navlink{font-size:14.5px;font-weight:500;color:#fff;opacity:.9;transition:opacity .2s,color .3s}
+  .nav a.navlink:hover{opacity:1}
+  .nav .callpill{
+    display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;
+    color:#fff;border:1px solid rgba(255,255,255,.4);padding:9px 16px;border-radius:2px;transition:all .25s;
+  }
+  .nav .callpill:hover{background:#fff;color:var(--pine);border-color:#fff}
+  .nav .callpill svg{width:15px;height:15px}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px;color:#fff}
+  .menu-btn svg{width:26px;height:26px}
+
+  /* scrolled state */
+  .site-header.scrolled{background:var(--paper);box-shadow:0 1px 0 var(--line);border-color:var(--line)}
+  .site-header.scrolled .brand{color:var(--ink)}
+  .site-header.scrolled .nav a.navlink{color:var(--ink)}
+  .site-header.scrolled .nav .callpill{color:var(--pine);border-color:var(--line)}
+  .site-header.scrolled .nav .callpill:hover{background:var(--pine);color:#fff;border-color:var(--pine)}
+  .site-header.scrolled .menu-btn{color:var(--ink)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-img{position:absolute;inset:0}
+  .hero-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .hero-img::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(11,34,32,.72) 0%,rgba(11,34,32,.28) 34%,rgba(11,34,32,.30) 62%,rgba(11,34,32,.88) 100%);
+  }
+  .hero-inner{position:relative;z-index:2;padding-bottom:60px;padding-top:120px;width:100%;color:#fff}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.7rem);font-weight:600;max-width:16ch;text-shadow:0 2px 24px rgba(0,0,0,.28)}
+  .hero .lede{max-width:52ch;margin-top:24px;font-size:clamp(1rem,1.4vw,1.18rem);color:rgba(255,255,255,.9);line-height:1.6}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .hero-stats{
+    display:flex;flex-wrap:wrap;gap:0;margin-top:44px;
+    border-top:1px solid rgba(255,255,255,.22);padding-top:22px;
+  }
+  .hero-stats .stat{padding-right:44px;margin-right:44px;border-right:1px solid rgba(255,255,255,.18)}
+  .hero-stats .stat:last-child{border-right:0;margin-right:0;padding-right:0}
+  .hero-stats .n{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:#fff}
+  .hero-stats .l{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:2px}
+
+  /* ---------- section base ---------- */
+  section{position:relative}
+  .band{padding:96px 0}
+  .band-paper{background:var(--paper)}
+  .band-alt{background:var(--paper-2)}
+  .band-pine{background:var(--pine);color:#fff}
+  .section-head{max-width:60ch}
+  .section-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:600}
+  .section-head p{color:var(--muted);margin-top:16px;font-size:1.05rem}
+  .band-pine .section-head p{color:rgba(255,255,255,.78)}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .about-copy p + p{margin-top:18px}
+  .about-copy .assurance{
+    margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px 28px;
+  }
+  .assurance .item{display:flex;gap:12px;align-items:flex-start}
+  .assurance .item svg{width:20px;height:20px;color:var(--pine);flex:none;margin-top:3px}
+  .assurance .item b{font-weight:600;font-size:15px;display:block}
+  .assurance .item span{font-size:13.5px;color:var(--muted);line-height:1.5}
+  .about-figure{position:relative}
+  .about-figure img{width:100%;height:520px;object-fit:cover;border-radius:3px;box-shadow:var(--shadow)}
+  .about-figure figcaption{
+    position:absolute;left:18px;bottom:18px;background:rgba(16,59,56,.92);color:#fff;
+    padding:9px 15px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;
+  }
+
+  /* ---------- projects (row layout) ---------- */
+  .proj-list{margin-top:46px;display:flex;flex-direction:column;gap:30px}
+  .proj{
+    display:grid;grid-template-columns:1.15fr 1fr;
+    background:var(--card);border:1px solid var(--line-soft);border-radius:5px;overflow:hidden;
+    box-shadow:0 12px 44px -32px rgba(16,59,56,.55);transition:box-shadow .3s ease;
+  }
+  .proj:hover{box-shadow:0 22px 54px -32px rgba(16,59,56,.6)}
+  .proj:nth-child(even) .proj-media{order:2}
+  .proj-media{position:relative;aspect-ratio:5/4;min-height:300px;overflow:hidden;background:var(--paper-2)}
+  .proj-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .proj:hover .proj-media img{transform:scale(1.04)}
+
+  /* photo placeholder */
+  .ph{
+    position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:12px;background:
+      repeating-linear-gradient(45deg,rgba(16,59,56,.045) 0 12px,transparent 12px 24px),var(--paper-2);
+    color:var(--muted);text-align:center;padding:24px;
+  }
+  .ph svg{width:34px;height:34px;opacity:.5}
+  .ph b{font-family:var(--serif);font-size:1.02rem;font-weight:600;color:var(--ink);opacity:.75}
+  .ph span{font-size:12.5px;max-width:26ch;line-height:1.5}
+
+  .tag{
+    position:absolute;top:16px;left:16px;z-index:3;font-size:11px;font-weight:600;letter-spacing:.12em;
+    text-transform:uppercase;padding:7px 12px;border-radius:2px;color:#fff;
+  }
+  .tag-done{background:rgba(16,59,56,.94)}
+  .tag-live{background:rgba(156,125,58,.96)}
+
+  .proj-body{padding:34px 36px;display:flex;flex-direction:column;justify-content:center}
+  .proj-body h3{font-size:1.6rem;font-weight:600}
+  .proj-body .loc{display:flex;align-items:flex-start;gap:9px;color:var(--muted);font-size:14px;margin-top:12px;line-height:1.5}
+  .proj-body .loc svg{width:15px;height:15px;flex:none;margin-top:3px}
+  .proj-body .desc{margin-top:14px;font-size:14.5px;color:var(--muted);line-height:1.6}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .chip{
+    font-size:12px;font-weight:600;letter-spacing:.06em;padding:6px 12px;border-radius:2px;
+    background:rgba(16,59,56,.07);color:var(--pine);border:1px solid rgba(16,59,56,.12);
+  }
+  .proj-actions{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .btn-sm{font-size:13.5px;padding:11px 18px}
+  .soon{
+    display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);
+    border:1px dashed var(--line);padding:11px 16px;border-radius:2px;background:transparent;
+  }
+  .soon svg{width:15px;height:15px;opacity:.6}
+
+  /* ---------- flagship ---------- */
+  .flag-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+  .flag-visual{position:relative;background:var(--pine)}
+  .flag-visual img{width:100%;height:100%;object-fit:cover;min-height:420px}
+  .flag-copy{background:var(--card);padding:clamp(40px,5vw,68px)}
+  .flag-copy h2{font-size:clamp(1.9rem,3.2vw,2.6rem);margin-top:6px}
+  .flag-copy .sub{color:var(--muted);margin-top:16px;font-size:1.02rem}
+  .flag-specs{list-style:none;padding:0;margin:30px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+  .flag-specs li{background:var(--card);padding:16px 18px}
+  .flag-specs .k{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .flag-specs .v{font-family:var(--serif);font-size:1.15rem;font-weight:600;margin-top:3px}
+  .flag-copy .cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+  .flag-plan{margin-top:60px}
+  .flag-plan .planwrap{background:#fff;border:1px solid var(--line);border-radius:4px;padding:18px;box-shadow:var(--shadow)}
+  .flag-plan img{width:100%;border-radius:2px}
+  .flag-plan .cap{text-align:center;color:var(--muted);font-size:13px;margin-top:12px;letter-spacing:.04em}
+
+  /* ---------- specs ---------- */
+  .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:4px;overflow:hidden;margin-top:44px}
+  .spec{background:var(--pine);padding:28px 26px}
+  .spec .num{font-family:var(--serif);font-size:13px;color:var(--brass);letter-spacing:.1em}
+  .spec h3{font-size:1.18rem;font-weight:600;margin-top:10px;color:#fff}
+  .spec p{color:rgba(255,255,255,.74);font-size:14px;margin-top:9px;line-height:1.55}
+  .spec-note{margin-top:26px;color:rgba(255,255,255,.6);font-size:12.5px;max-width:80ch}
+
+  /* ---------- gallery ---------- */
+  .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+  .gal-grid figure{margin:0;position:relative;overflow:hidden;border-radius:3px;aspect-ratio:4/3}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .gal-grid figure:hover img{transform:scale(1.05)}
+  .gal-grid figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:16px 14px 12px;color:#fff;font-size:12.5px;
+    letter-spacing:.06em;background:linear-gradient(180deg,transparent,rgba(11,34,32,.85))
+  }
+
+
+  .gal-head{
+    display:flex;align-items:center;gap:16px;margin-top:40px;
+    font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--ink);
+  }
+  .gal-head .rule{flex:1;height:1px;background:var(--line)}
+  .gal-head .gal-tag{
+    font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .gal-grid{margin-top:16px}
+
+  /* ---------- contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+  .contact-info .line{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .contact-info .line:first-of-type{border-top:1px solid var(--line)}
+  .contact-info .line svg{width:20px;height:20px;color:var(--pine);flex:none;margin-top:3px}
+  .contact-info .line .k{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .contact-info .line .v{font-size:15.5px;margin-top:4px;line-height:1.5}
+  .contact-info .v a:hover{color:var(--pine);text-decoration:underline}
+  .contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+  .enquiry{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:30px;box-shadow:var(--shadow)}
+  .enquiry h3{font-size:1.4rem;font-weight:600}
+  .enquiry p.small{color:var(--muted);font-size:13.5px;margin-top:6px}
+  .field{margin-top:16px}
+  .field label{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+  .field input,.field select,.field textarea{
+    width:100%;font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--paper);
+    border:1px solid var(--line);border-radius:3px;padding:12px 14px;transition:border-color .2s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--pine)}
+  .field textarea{resize:vertical;min-height:92px}
+  .enquiry .btn-wa{width:100%;justify-content:center;margin-top:20px}
+  .map-embed{margin-top:24px;border-radius:5px;overflow:hidden;border:1px solid var(--line);height:260px}
+  .map-embed iframe{width:100%;height:100%;border:0;filter:saturate(.9)}
+
+  /* ---------- footer ---------- */
+  .footer{background:#0c2e2b;color:rgba(255,255,255,.72);padding:64px 0 30px}
+  .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+  .footer .fbrand .b1{font-family:var(--serif);font-weight:700;font-size:22px;color:#fff}
+  .footer .fbrand .b2{font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;margin-top:6px;color:var(--brass)}
+  .footer .fbrand p{margin-top:16px;font-size:14px;max-width:34ch;line-height:1.6}
+  .footer h4{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0 0 16px}
+  .footer ul{list-style:none;padding:0;margin:0}
+  .footer li{margin-bottom:11px;font-size:14px}
+  .footer a:hover{color:#fff}
+  .footer-bottom{
+    margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:rgba(255,255,255,.5)
+  }
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- mobile ---------- */
+  @media(max-width:900px){
+    .about-grid,.flag-grid,.contact-grid{grid-template-columns:1fr}
+    .about-figure{order:-1}
+    .about-figure img{height:340px}
+    .flag-visual img{min-height:300px}
+    .spec-grid{grid-template-columns:repeat(2,1fr)}
+    .proj{grid-template-columns:1fr}
+    .proj:nth-child(even) .proj-media{order:0}
+    .proj-media{min-height:250px;aspect-ratio:16/10}
+    .proj-body{padding:28px 24px 30px}
+    .gal-grid{grid-template-columns:1fr;gap:12px}
+    .flag-specs{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    body{font-size:16px}
+    .band{padding:70px 0}
+    .nav{
+      position:fixed;inset:74px 0 auto 0;background:var(--paper);flex-direction:column;align-items:stretch;
+      gap:0;padding:10px 26px 22px;box-shadow:0 20px 30px -18px rgba(0,0,0,.3);
+      transform:translateY(-140%);transition:transform .35s ease;border-bottom:1px solid var(--line)
+    }
+    .nav.open{transform:none}
+    .nav a.navlink{color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line-soft);opacity:1}
+    .nav .callpill{color:var(--pine);border-color:var(--line);justify-content:center;margin-top:14px}
+    .site-header.scrolled .nav a.navlink,.nav a.navlink{color:var(--ink)}
+    .menu-btn{display:block}
+    .assurance{grid-template-columns:1fr}
+    .about-copy .assurance{grid-template-columns:1fr}
+    .hero-stats .stat{padding-right:26px;margin-right:26px}
+    .footer-top{grid-template-columns:1fr;gap:32px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none;transition:none}
+    .btn,.proj,.proj-media img,.gal-grid img{transition:none!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Sai Alekya Constructions home">
+      <span class="b1">Sai Alekya</span>
+      <span class="b2">Constructions</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a class="navlink" href="#about">About</a>
+      <a class="navlink" href="#projects">Projects</a>
+      <a class="navlink" href="#flagship">Floor plan</a>
+      <a class="navlink" href="#specs">Quality</a>
+      <a class="navlink" href="#contact">Contact</a>
+      <a class="callpill" href="tel:+919502721030">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        95027 21030
+      </a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-img">
+    <img src="images/hero.jpg" alt="Thunga Residency, a completed Sai Alekya apartment building in Tirupati" />
+  </div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="eyebrow light">Sai Alekya Constructions · Tirupati</div>
+      <h1>Homes built to stand for generations.</h1>
+      <p class="lede">We build RCC-framed 2 &amp; 3 BHK apartments in Tirupati — engineered for wind and seismic loads, and finished with the same materials we would choose for our own family.</p>
+      <div class="hero-cta">
+        <a class="btn btn-light" href="#flagship">View current project</a>
+        <a class="btn btn-wa" href="https://wa.me/919502721030?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Alekya%20Homes%2C%20Tirupati." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.53.07-.8.38-.28.3-1.05 1.02-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.12 3.24 5.13 4.54.72.31 1.28.5 1.71.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.93.96-3.48-.22-.36a9.38 9.38 0 0 1 14.56-11.6 9.32 9.32 0 0 1 2.75 6.63c0 5.18-4.22 9.4-9.4 9.4zM20.5 3.5A11.36 11.36 0 0 0 2.6 17.18L1 23l5.96-1.56A11.34 11.34 0 0 0 23.4 11.4c0-3.03-1.18-5.88-3.32-8.02z"/></svg>
+          Enquire on WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="n">2</div><div class="l">Projects delivered</div></div>
+        <div class="stat"><div class="n">2</div><div class="l">Under construction</div></div>
+        <div class="stat"><div class="n">2 &amp; 3 BHK</div><div class="l">Across Tirupati</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="band band-paper" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <div class="eyebrow">Who we are</div>
+        <h2 class="section-head" style="font-size:clamp(1.9rem,3.4vw,2.7rem)">A local builder you can meet on site.</h2>
+        <p style="color:var(--muted);margin-top:18px">Sai Alekya Constructions is a family-run builder based in Tirupati, developing residential apartments under the <strong style="color:var(--ink)">Alekya Homes</strong> name. Two buildings handed over and two more rising across the city. We keep our projects small in number so every slab, wall and fitting gets attention — and so buyers deal directly with the people who build their home.</p>
+        <p style="color:var(--muted)">Every structure is an RCC frame designed to withstand wind and seismic loads, built with red-clay brick and quality blockwork, and handed over on the timeline we commit to.</p>
+        <div class="assurance">
+          <div class="item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div><b>Engineered structure</b><span>RCC frames for wind &amp; seismic loads</span></div>
+          </div>
+          <div class="item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/></svg>
+            <div><b>Honest materials</b><span>Teak doors, UPVC windows, granite tops</span></div>
+          </div>
+          <div class="item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+            <div><b>On-time handover</b><span>Clear milestones, kept commitments</span></div>
+          </div>
+          <div class="item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><b>Branded fittings</b><span>Reputed CP, electrical &amp; lift makes</span></div>
+          </div>
+        </div>
+      </div>
+      <figure class="about-figure reveal">
+        <img src="images/site_ah_pour.jpg" alt="Sai Alekya crew placing and levelling a concrete slab at Alekya Homes" />
+        <figcaption>Slab pour · Alekya Homes</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<!--
+  HOW TO EDIT A PROJECT:
+  - Photo:    change the <img src="images/....jpg">
+  - Status:   tag-done = Completed  |  tag-live = Under construction
+  - Brochure: change the href on the "View brochure" link to your PDF in brochures/
+  - No brochure yet? leave the <span class="soon"> block in place.
+-->
+<section class="band band-alt" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Our projects</div>
+      <h2>Four buildings. Two homes handed over, two rising.</h2>
+      <p>Every project is an RCC-framed structure built to the same specification. Open a brochure for full plans, sizes and finishes.</p>
+    </div>
+
+    <div class="proj-list">
+
+      <!-- 1. SAMATHA BLOCK -->
+      <article class="proj reveal">
+        <div class="proj-media">
+          <span class="tag tag-done">Completed</span>
+          <img src="images/samatha.jpg" alt="Samatha Block, Avilala, Tirupati">
+        </div>
+        <div class="proj-body">
+          <h3>Samatha Block</h3>
+          <div class="loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Avilala, opposite Sub-Registrar Office, Tirupati
+          </div>
+          <p class="desc">Well-planned 2 BHK homes at Avilala, a short walk from the Sub-Registrar Office and well connected to the rest of Tirupati. Completed and occupied.</p>
+          <div class="chips"><span class="chip">2 BHK</span><span class="chip">Delivered</span></div>
+          <div class="proj-actions">
+            <a class="btn btn-primary btn-sm" href="brochures/samatha-block.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              View brochure
+            </a>
+            <a class="btn btn-ghost btn-sm" href="#contact">Enquire</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. THUNGA RESIDENCY -->
+      <article class="proj reveal">
+        <div class="proj-media">
+          <span class="tag tag-done">Completed</span>
+          <img src="images/thunga.jpg" alt="Thunga Residency, Postal Colony, Tirupati">
+        </div>
+        <div class="proj-body">
+          <h3>Thunga Residency</h3>
+          <div class="loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            S.Y. No. 4/3, Postal Colony, near Ankara Hospital, Korlakunta Road, Tirupati
+          </div>
+          <p class="desc">Spacious 3 BHK apartments in the established Postal Colony neighbourhood, minutes from Ankara Hospital and Korlakunta Road. Delivered and fully occupied.</p>
+          <div class="chips"><span class="chip">3 BHK</span><span class="chip">Delivered</span></div>
+          <div class="proj-actions">
+            <a class="btn btn-primary btn-sm" href="brochures/thunga-residency.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              View brochure
+            </a>
+            <a class="btn btn-ghost btn-sm" href="#contact">Enquire</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. ALEKYA HOMES -->
+      <article class="proj reveal">
+        <div class="proj-media">
+          <span class="tag tag-live">Under construction</span>
+          <img src="images/alekya_homes.jpg" alt="Alekya Homes, R.C. Road, Tirupati">
+        </div>
+        <div class="proj-body">
+          <h3>Alekya Homes</h3>
+          <div class="loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Vedanthapuram Agraharam, near Village Sachivalayam, Gruhalakshmi Layout, R.C. Road, Tirupati
+          </div>
+          <p class="desc">2 BHK homes of 1200–1265 sq.ft, six flats to a floor around a 7'0&quot; wide corridor and a six-passenger lift. Under construction — units available to book now.</p>
+          <div class="chips"><span class="chip">2 BHK</span><span class="chip">1200–1265 sq.ft</span><span class="chip">Lift</span></div>
+          <div class="proj-actions">
+            <a class="btn btn-primary btn-sm" href="brochures/alekya-homes.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              View brochure
+            </a>
+            <a class="btn btn-ghost btn-sm" href="#flagship">Floor plan</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. ALEKYA TOWERS -->
+      <article class="proj reveal">
+        <div class="proj-media">
+          <span class="tag tag-live">Under construction</span>
+          <img src="images/alekya_towers.jpg" alt="Alekya Towers A and B block, Srivari Nagar, Tirupati" style="object-position:center 12%">
+        </div>
+        <div class="proj-body">
+          <h3>Alekya Towers — A &amp; B Block</h3>
+          <div class="loc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Srivari Nagar, near Narayanadri Hospital, Renigunta Road, Tirupati
+          </div>
+          <p class="desc">Our largest development yet — two blocks offering both 2 and 3 BHK homes at Srivari Nagar, close to Narayanadri Hospital and the Renigunta Road corridor. Currently under construction.</p>
+          <div class="chips"><span class="chip">2 BHK</span><span class="chip">3 BHK</span><span class="chip">A &amp; B Block</span></div>
+          <div class="proj-actions">
+            <!-- Full brochure not ready yet: this links to the floor plan for now.
+                 When the brochure arrives, put it at brochures/alekya-towers.pdf and change
+                 the href below to that file, and the label to "View brochure". -->
+            <a class="btn btn-primary btn-sm" href="brochures/alekya-towers-floorplan.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              Floor plan (PDF)
+            </a>
+            <!--
+            <a class="btn btn-primary btn-sm" href="brochures/alekya-towers.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              View brochure
+            </a>
+            -->
+            <a class="btn btn-ghost btn-sm" href="#contact">Register interest</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLAGSHIP ============ -->
+<section class="band band-paper" id="flagship" style="padding-bottom:96px">
+  <div class="wrap">
+    <div class="flag-grid reveal" style="border-radius:5px;overflow:hidden;box-shadow:var(--shadow)">
+      <div class="flag-visual">
+        <img src="images/alekya_homes.jpg" alt="Architectural render of Alekya Homes, Tirupati">
+      </div>
+      <div class="flag-copy">
+        <div class="eyebrow">Now booking</div>
+        <h2>Alekya Homes, Tirupati</h2>
+        <p class="sub">Spacious 2 BHK apartments on R.C. Road, near the Village Sachivalayam, Gruhalakshmi Layout. Six flats per floor, wide corridors and a passenger lift — a calm, well-planned home minutes from the town.</p>
+        <ul class="flag-specs">
+          <li><div class="k">Configuration</div><div class="v">2 BHK</div></li>
+          <li><div class="k">Unit size</div><div class="v">1200–1265 sq.ft</div></li>
+          <li><div class="k">Flats / floor</div><div class="v">Six</div></li>
+          <li><div class="k">Lift</div><div class="v">6-passenger</div></li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn-wa" href="https://wa.me/919502721030?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20flat%20at%20Alekya%20Homes%2C%20Tirupati.%20Please%20share%20availability%20and%20price." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.53.07-.8.38-.28.3-1.05 1.02-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.12 3.24 5.13 4.54.72.31 1.28.5 1.71.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
+            Book / enquire
+          </a>
+          <a class="btn btn-ghost" href="#contact">Get directions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flag-plan reveal">
+      <div class="eyebrow" style="justify-content:center;margin-top:60px">Typical floor plan</div>
+      <div class="planwrap">
+        <img src="images/floorplan.jpg" alt="Typical floor plan for Alekya Homes showing six units per floor, 1200 to 1265 sq.ft">
+      </div>
+      <p class="cap">Typical floor — six units of 1200 to 1265 sq.ft, served by a central lift and 7'0&quot; wide corridors.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECS / QUALITY ============ -->
+<section class="band band-pine" id="specs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow light">Build quality</div>
+      <h2>Specified down to the fittings.</h2>
+      <p>What goes into an Alekya home — the same standard across every flat.</p>
+    </div>
+    <div class="spec-grid">
+      <div class="spec reveal"><div class="num">01</div><h3>Structure</h3><p>RCC framed structure designed to withstand wind and seismic loads, with red-clay brick or AAC/CLC block masonry.</p></div>
+      <div class="spec reveal"><div class="num">02</div><h3>Doors &amp; windows</h3><p>Teak-wood main door with quality hardware, teak-frame internal flush doors, UPVC/aluminium windows with grills and glass.</p></div>
+      <div class="spec reveal"><div class="num">03</div><h3>Plaster &amp; paint</h3><p>Double-coat cement plaster inside and out. Premium ACE exterior paint; two coats of emulsion over putty inside.</p></div>
+      <div class="spec reveal"><div class="num">04</div><h3>Flooring</h3><p>2×2 vitrified tile flooring throughout; granite, marble or anti-skid ceramic in common areas.</p></div>
+      <div class="spec reveal"><div class="num">05</div><h3>Kitchen</h3><p>Granite platform with steel sink, bore and municipal water provision, and an exhaust point. Glazed tile dado above the counter.</p></div>
+      <div class="spec reveal"><div class="num">06</div><h3>Toilets</h3><p>EWC in the master with flush tank, hot &amp; cold mixer with shower, IWC elsewhere — CP fittings of reputed make, designer glazed dado to door height.</p></div>
+      <div class="spec reveal"><div class="num">07</div><h3>Electrical</h3><p>Concealed copper wiring, AC points in bedrooms, geyser points in bathrooms, 3-phase supply, individual meter and MCBs.</p></div>
+      <div class="spec reveal"><div class="num">08</div><h3>Lift &amp; more</h3><p>Six-passenger lift of reputed make, telephone/internet and cable-TV provision in bedroom and living room.</p></div>
+    </div>
+    <p class="spec-note reveal">Note: Registration, water, sewerage, car parking, lift and electrical charges are borne by the purchaser. GST applicable as per government norms. Shelves, chajjas, lofts and arches are optional at extra cost. Full specification sheet available on request.</p>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="band band-paper" id="onsite">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">On site</div>
+      <h2>The work behind the finish.</h2>
+      <p>Concrete tied, placed and levelled by our own supervised crews. Progress at both live sites, as it stands today.</p>
+    </div>
+
+    <div class="gal-head reveal"><span>Alekya Homes</span><span class="rule"></span><span class="gal-tag">R.C. Road</span></div>
+    <div class="gal-grid">
+      <figure class="reveal"><img src="images/site_ah_building.jpg" alt="Alekya Homes superstructure with brick masonry underway"><figcaption>Superstructure &amp; brickwork</figcaption></figure>
+      <figure class="reveal"><img src="images/site_ah_rebar.jpg" alt="Workers tying reinforcement steel on a rooftop slab"><figcaption>Reinforcement &amp; steel tying</figcaption></figure>
+      <figure class="reveal"><img src="images/site_ah_pour.jpg" alt="Crew placing and levelling freshly pumped concrete"><figcaption>Slab pour &amp; levelling</figcaption></figure>
+    </div>
+
+    <div class="gal-head reveal" style="margin-top:44px"><span>Alekya Towers</span><span class="rule"></span><span class="gal-tag">Srivari Nagar</span></div>
+    <div class="gal-grid">
+      <figure class="reveal"><img src="images/site_at_columns.jpg" alt="Column reinforcement and footings at the Alekya Towers site"><figcaption>Column starters &amp; footings</figcaption></figure>
+      <figure class="reveal"><img src="images/site_at_site.jpg" alt="Alekya Towers site with foundation work in progress"><figcaption>Foundation stage</figcaption></figure>
+      <figure class="reveal"><img src="images/site_at_footings.jpg" alt="Footing formwork and reinforcement at Alekya Towers"><figcaption>Footings &amp; formwork</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="band band-alt" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:44px">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Come see a home in person.</h2>
+      <p>Call, message on WhatsApp, or visit the site. We're happy to walk you through availability, pricing and the build.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div><div class="k">Call us</div><div class="v"><a href="tel:+919502721030">95027 21030</a> &nbsp;·&nbsp; <a href="tel:+919885455082">98854 55082</a></div></div>
+        </div>
+        <div class="line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><div class="k">Site address</div><div class="v">Alekya Homes, Vedanthapuram Agraharam, near Village Sachivalayam, Gruhalakshmi Layout, R.C. Road, Tirupati.</div></div>
+        </div>
+        <div class="line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          <div><div class="k">Office</div><div class="v">Sai Alekya Apartments, Postal Colony, near Hero Two-Wheeler Showroom, Renigunta Road, Tirupati – 517501.</div></div>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="tel:+919502721030">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call now
+          </a>
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=Renigunta+Road+Tirupati+517501" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="map-embed">
+          <iframe title="Sai Alekya Constructions location, Tirupati" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Renigunta%20Road%2C%20Tirupati%2C%20517501&output=embed"></iframe>
+        </div>
+      </div>
+
+      <div class="enquiry reveal">
+        <h3>Send an enquiry</h3>
+        <p class="small">Fill this in and it opens WhatsApp with your message ready to send — no email needed.</p>
+        <div class="field">
+          <label for="fname">Your name</label>
+          <input id="fname" type="text" placeholder="e.g. Ramesh Kumar" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="fphone">Phone number</label>
+          <input id="fphone" type="tel" placeholder="10-digit mobile number" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="ftype">Interested in</label>
+          <select id="ftype">
+            <option>2 BHK — Alekya Homes, Tirupati</option>
+            <option>2 BHK — Alekya Towers, Tirupati</option>
+            <option>3 BHK — Alekya Towers, Tirupati</option>
+            <option>A site visit</option>
+            <option>General enquiry</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fmsg">Message (optional)</label>
+          <textarea id="fmsg" placeholder="Anything you'd like to ask about availability, pricing or the build."></textarea>
+        </div>
+        <a class="btn btn-wa" id="waSubmit" href="https://wa.me/919502721030" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.53.07-.8.38-.28.3-1.05 1.02-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.12 3.24 5.13 4.54.72.31 1.28.5 1.71.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.5a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.93.96-3.48-.22-.36a9.38 9.38 0 0 1 14.56-11.6 9.32 9.32 0 0 1 2.75 6.63c0 5.18-4.22 9.4-9.4 9.4z"/></svg>
+          Send on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="fbrand">
+        <div class="b1">Sai Alekya Constructions</div>
+        <div class="b2">Alekya Homes · Tirupati</div>
+        <p>Family-run builders of well-engineered 2 &amp; 3 BHK homes in Tirupati, Andhra Pradesh.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#flagship">Alekya Homes</a></li>
+          <li><a href="#specs">Build quality</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <ul>
+          <li><a href="tel:+919502721030">95027 21030</a></li>
+          <li><a href="tel:+919885455082">98854 55082</a></li>
+          <li><a href="https://wa.me/919502721030" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li>Renigunta Road, Tirupati – 517501</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Sai Alekya Constructions. All rights reserved.</span>
+      <span>Architects: Akshara Designs, Hyderabad</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // header scroll state
+  const header = document.getElementById('header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+    header.classList.add('scrolled');
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false);
+  }));
+
+  // scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // WhatsApp enquiry builder
+  const waBtn = document.getElementById('waSubmit');
+  const build = () => {
+    const name = (document.getElementById('fname').value || '').trim();
+    const phone = (document.getElementById('fphone').value || '').trim();
+    const type = document.getElementById('ftype').value;
+    const msg = (document.getElementById('fmsg').value || '').trim();
+    let t = `Hi Sai Alekya Constructions,%0A%0A`;
+    t += `I'm interested in: ${type}.%0A`;
+    if(name) t += `Name: ${name}%0A`;
+    if(phone) t += `Phone: ${phone}%0A`;
+    if(msg) t += `%0A${msg}`;
+    waBtn.href = `https://wa.me/919502721030?text=${t}`;
+  };
+  ['fname','fphone','ftype','fmsg'].forEach(id => {
+    document.getElementById(id).addEventListener('input', build);
+    document.getElementById(id).addEventListener('change', build);
+  });
+  build();
+</script>
+</body>
+</html>
